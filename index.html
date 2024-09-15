@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 850px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width: 530px)" href="phone.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <div class="navbar-content">
+            <div class="navbar-heading">Portfolio</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section id="home">
+        <div class="home-content">
+            <div class="profile-photo">
+                <img src="profile1.png" alt="Profile Photo">
+            </div>
+            <div class="main-text">
+                <h1 class="headings">I AM <br> RAHUL Tejwani</h1>
+                <button class="btn">About ME</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+         <div id="pic">
+            <img src="profile1.png" alt="">
+            <div id="intro">
+                <h2>Rahul RAJA</h2>
+                <p1>
+                    Hi, I'm Rahul Raja, a Computer Science student passionate about technology 
+                    and innovation. I have experience in Python, Java, and C++, with a keen 
+                    interest in artificial intelligence and machine learning. I've worked on 
+                    several projects and actively participate in hackathons. I'm always exploring 
+                    new technologies and staying updated with industry trends, aiming to contribute 
+                    to groundbreaking innovations in the tech world.
+                </p1>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="p1.PNG" alt="">
+            <img src="p2.PNG" alt="">
+            <img src="p1.PNG" alt="">
+            
+        </div>
+
+
+
+    </section>
+
+    <section id="skills">
+
+        <h1 class="headings">Skills</h1>
+
+        <div class="container">
+
+            <div class="skill-box">
+                <span class="title">Java</span>
+                <div class="skill-bar">
+                    <span class="skill-per java">
+                        <span class="tooltip">50%</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <span class="title">Cpp</span>
+                <div class="skill-bar">
+                    <span class="skill-per cpp">
+                        <span class="tooltip">40%</span>
+                    </span>
+                </div>
+            </div>
+
+            <div class="skill-box">
+                <span class="title">HTML</span>
+                <div class="skill-bar">
+                    <span class="skill-per html">
+                        <span class="tooltip">30%</span>
+                    </span>
+                </div>
+            </div>
+            <div class="skill-box">
+                <span class="title">CSS</span>
+                <div class="skill-bar">
+                    <span class="skill-per css">
+                        <span class="tooltip">30%</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    
+
+    <section id="contact">
+        <h1 class="headings">CONTACT</h1>
+        <form action="" class="form">
+            <input type="text" name="Name" class="input" placeholder="Enter Your Name">
+            <input type="email" name="Email" class="input" placeholder="Enter Your Email">
+            <textarea name="msg" id="msg" cols="20" rows="10" placeholder="Enter Your Message"></textarea>
+            <input type="submit" value="SEND" id="send ">
+        </form>
+    </section>
+    
+</body>
+</html>
