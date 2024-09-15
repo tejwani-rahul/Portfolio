@@ -81,6 +81,7 @@ html {
 .github-btn i {
     font-size: 1.5rem; /* Adjusted icon size */
     margin-right: 8px;
+    background-color:  white;
 }
 
 .github-btn:hover {
@@ -166,11 +167,17 @@ html {
 }
 
 
-.heading2{
+.subttile{
+    font-size:1.7rem;
+    letter-spacing: 1px;
+}
+
+.name{
     
-        font-size: 1.4rem;
+        font-size: 3rem;
         letter-spacing: 1px;
 }
+
 
 .btn {
     padding: 10px 35px;
@@ -259,7 +266,7 @@ html {
   .projects .container .project-Content .project-box .project-title {
     font-size: 1.2rem;
     font-weight: 600;
-    color: #504538;
+    color: white;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -304,7 +311,7 @@ html {
   .projects .container .project-Content .project-box .desc p {
     text-align: center;
     font-size: 1rem;
-    color: #504538;
+    color: white;
     font-weight: 500;
     line-height: 1.5;
   }
@@ -324,7 +331,7 @@ html {
   
   .skills-container p {
     font-size: 1.1rem;
-    color: #4c4a48;
+
     max-width: 800px;
     margin: 0 auto 2.5rem;
   }
@@ -356,7 +363,7 @@ html {
   
   .skill h3 {
     font-size: 20px;
-    color: #333;
+    color:black;
   }
 
 /* Contact Section */
