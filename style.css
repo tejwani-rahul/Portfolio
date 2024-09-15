@@ -464,7 +464,7 @@ html {
     }
 }
 
-/* Responsive styles for phones */
+/* Responsive styles for phones*/
 @media (max-width: 530px) {
     .navbar ul {
         display: none;
