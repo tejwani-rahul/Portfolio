@@ -481,7 +481,21 @@ html {
         display: flex;
     }
 
+    #pic{
+        flex-direction: column;
+    }
 
+    #pic img{
+        width: 100%;
+    }
+
+    .project-Content{
+        flex-direction: column;
+    }
+
+    .projects .container .project-Content .project-box{
+        width: 100%;
+    }
 
     
     .home-content {
@@ -522,4 +536,7 @@ html {
     #send {
         width: 30%; 
     }
+}
+.headings h1{
+    color: #fff;
 }
