@@ -1082,12 +1082,10 @@
         const body = document.body;
         const icon = themeToggle.querySelector('i');
 
-        // Check for saved theme preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            body.setAttribute('data-theme', savedTheme);
-            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
+        // Check for saved theme preference, default to dark if none saved
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', savedTheme);
+        icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
 
         themeToggle.addEventListener('click', () => {
             const currentTheme = body.getAttribute('data-theme');
