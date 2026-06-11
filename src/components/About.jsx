@@ -67,42 +67,8 @@ export default function About() {
         {/* Bento Layout Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-left">
 
-          {/* Card 1: Portrait (1 Column) */}
-          <div className="bento-card md:col-span-1 md:order-2 p-0 flex flex-col justify-end min-h-[350px] group relative hover:border-text-faint/30 hover:shadow-[0_0_30px_rgba(255,255,255,0.02)]">
-            {/* Tall Portrait Picture Frame */}
-            <div className="absolute inset-0 bg-bg-pure">
-              <img
-                src="assets/images/profile.jpg"
-                alt="Rahul Raja"
-                className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 select-none"
-              />
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-            </div>
-
-            {/* Floating Rotating Emblem */}
-            <div className="absolute top-6 right-6 z-10 w-16 h-16 pointer-events-none select-none">
-              <svg className="rotating-badge w-full h-full text-white/50" viewBox="0 0 100 100">
-                <defs>
-                  <path id="text-path" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" />
-                </defs>
-                <text className="text-[9px] fill-current font-bold uppercase tracking-widest">
-                  <textPath href="#text-path" startOffset="0%">
-                    • ENGINEER • DEVELOPER • CREATOR
-                  </textPath>
-                </text>
-              </svg>
-            </div>
-
-            <div className="absolute bottom-8 left-8 z-10">
-              <p className="text-[10px] font-mono text-white/40 uppercase tracking-[0.2em]">Profile</p>
-              <h4 className="text-lg font-bold text-white mt-1">Rahul Raja</h4>
-              <p className="text-xs text-white/80 font-light">Recent CS Graduate</p>
-            </div>
-          </div>
-
-          {/* Card 2: Main Biography (2 Columns) */}
-          <div className="bento-card md:col-span-2 md:order-1 flex flex-col justify-between hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
+          {/* Card 2: Main Biography (3 Columns) */}
+          <div className="bento-card md:col-span-3 md:order-1 flex flex-col justify-between hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
             <div>
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-text-ghost">Biography</span>
               <h3 className="text-xl font-bold text-text-primary mt-2 mb-6">
@@ -135,7 +101,7 @@ export default function About() {
           </div>
 
           {/* Card 3: Full-Stack Architecture (2 Columns) */}
-          <div className="bento-card md:col-span-2 md:order-3 hover:border-cyan-500/20 hover:shadow-[0_0_30px_rgba(6,182,212,0.04)]">
+          <div className="bento-card md:col-span-2 md:order-2 hover:border-cyan-500/20 hover:shadow-[0_0_30px_rgba(6,182,212,0.04)]">
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-text-ghost">Core Stack</span>
             <h3 className="text-xl font-bold text-text-primary mt-2 mb-6">Full-Stack Architecture</h3>
 
@@ -203,7 +169,7 @@ export default function About() {
           </div>
 
           {/* Card 5: AI & Machine Learning (2 Columns) */}
-          <div className="bento-card md:col-span-2 md:order-5 hover:border-purple-500/20 hover:shadow-[0_0_30px_rgba(168,85,247,0.04)]">
+          <div className="bento-card md:col-span-2 md:order-4 hover:border-purple-500/20 hover:shadow-[0_0_30px_rgba(168,85,247,0.04)]">
             <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-text-ghost">Intelligence</span>
             <h3 className="text-xl font-bold text-text-primary mt-2 mb-6">Generative AI & Machine Learning</h3>
 
@@ -267,7 +233,7 @@ export default function About() {
           </div>
 
           {/* Card 4: Developer Toolchain (1 Column) */}
-          <div className="bento-card md:col-span-1 md:order-4 flex flex-col justify-between hover:border-emerald-500/20 hover:shadow-[0_0_30px_rgba(16,185,129,0.04)]">
+          <div className="bento-card md:col-span-1 md:order-3 flex flex-col justify-between hover:border-emerald-500/20 hover:shadow-[0_0_30px_rgba(16,185,129,0.04)]">
             <div>
               <span className="text-[10px] font-mono uppercase tracking-[0.2em] text-text-ghost">Toolchain</span>
               <h3 className="text-xl font-bold text-text-primary mt-2 mb-6">Tools & Workspaces</h3>
@@ -301,7 +267,7 @@ export default function About() {
           </div>
 
           {/* Card 6: Interactive Neural visualizer (1 Column) */}
-          <div className="bento-card hidden md:flex md:col-span-1 md:order-6 flex-col justify-between h-[250px] relative overflow-hidden bg-bg-pure hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
+          <div className="bento-card hidden md:flex md:col-span-1 md:order-5 flex-col justify-between h-[250px] relative overflow-hidden bg-bg-pure hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
             <NeuralNet />
 
             <div className="relative z-10 flex flex-col justify-between h-full">
