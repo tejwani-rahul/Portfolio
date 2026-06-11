@@ -87,13 +87,6 @@ export default function Hero() {
                 </text>
               </svg>
             </div>
-
-            {/* Floating Info Overlay */}
-            <div className="absolute bottom-8 left-8 z-10 text-left">
-              <p className="text-[10px] font-mono text-white/50 uppercase tracking-[0.2em]">Profile</p>
-              <h4 className="text-xl font-bold text-white mt-1 uppercase tracking-wide">Rahul Raja</h4>
-              <p className="text-xs text-white/80 font-light mt-1">CS Graduate</p>
-            </div>
           </div>
         </div>
 
