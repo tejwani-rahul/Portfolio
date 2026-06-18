@@ -3,7 +3,7 @@ import { Sun, Moon, Menu, X, Home, User, FolderOpen, Mail } from 'lucide-react';
 
 export default function Navbar({ currentPath }) {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('portfolio-theme') || 'dark';
+    return localStorage.getItem('portfolio-theme') || 'light';
   });
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);

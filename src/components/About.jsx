@@ -267,7 +267,7 @@ export default function About() {
           </div>
 
           {/* Card 6: Interactive Neural visualizer (1 Column) */}
-          <div className="bento-card hidden md:flex md:col-span-1 md:order-5 flex-col justify-between h-[250px] relative overflow-hidden bg-bg-pure hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
+          <div className="bento-card hidden md:flex md:col-span-1 md:order-5 flex-col justify-between h-[250px] relative overflow-hidden hover:border-indigo-500/20 hover:shadow-[0_0_30px_rgba(99,102,241,0.04)]">
             <NeuralNet />
 
             <div className="relative z-10 flex flex-col justify-between h-full">
