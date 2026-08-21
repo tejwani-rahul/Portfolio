@@ -114,13 +114,16 @@ export default function About() {
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" className="w-3.5 h-3.5" /> Python
                   </span>
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
+                    <i className="devicon-javascript-plain colored text-sm"></i> JavaScript
+                  </span>
+                  <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
+                    <i className="devicon-typescript-plain colored text-sm"></i> TypeScript
+                  </span>
+                  <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
                     <i className="devicon-java-plain colored text-sm"></i> Java
                   </span>
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
                     <i className="devicon-kotlin-plain colored text-sm"></i> Kotlin
-                  </span>
-                  <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
-                    <i className="devicon-javascript-plain colored text-sm"></i> JavaScript
                   </span>
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
                     <i className="devicon-cplusplus-plain colored text-sm"></i> C++
@@ -134,6 +137,7 @@ export default function About() {
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { name: 'React.js', icon: 'devicon-react-original colored' },
+                    { name: 'Next.js', icon: 'devicon-nextjs-plain text-text-primary' },
                     { name: 'Redux Toolkit', icon: 'devicon-redux-original colored' },
                     { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original colored' },
                     { name: 'Node.js', icon: 'devicon-nodejs-plain colored' },
