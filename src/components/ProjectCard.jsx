@@ -15,7 +15,7 @@ const getTechTagStyle = (techName) => {
     return 'bg-violet-500/10 text-violet-700 dark:text-violet-400 border-violet-200 dark:border-violet-500/20';
   }
   if (name.includes('redux')) {
-    return 'bg-pink-500/10 text-pink-600 dark:text-pink-400 border-pink-200 dark:border-pink-500/20';
+    return 'bg-pink-500/10 text-pink-700 dark:text-pink-400 border-pink-200 dark:border-pink-500/20';
   }
   if (name.includes('pytorch') || name.includes('yolo') || name.includes('resnet')) {
     return 'bg-rose-500/10 text-rose-700 dark:text-rose-400 border-rose-200 dark:border-rose-500/20';
@@ -65,6 +65,8 @@ const getProjectHoverStyle = (id) => {
       return 'hover:border-emerald-500/30 hover:shadow-[0_0_50px_rgba(16,185,129,0.06)]';
     case 'bookstore':
       return 'hover:border-orange-500/30 hover:shadow-[0_0_50px_rgba(249,115,22,0.06)]';
+    case 'waypoint':
+      return 'hover:border-cyan-500/30 hover:shadow-[0_0_50px_rgba(6,182,212,0.06)]';
     case 'chatbot':
       return 'hover:border-teal-500/30 hover:shadow-[0_0_50px_rgba(20,184,166,0.06)]';
     default:
@@ -79,11 +81,13 @@ export default function ProjectCard({ project }) {
       className={`bento-card group hover:-translate-y-1 transition-all duration-400 h-full flex flex-col text-left ${getProjectHoverStyle(project.id)}`}
     >
       {/* Preview Image Frame */}
-      <div className="aspect-video w-full overflow-hidden rounded-xl bg-bg-deep relative mb-6">
+      <div className="aspect-[16/10] w-full overflow-hidden rounded-xl bg-bg-deep border border-border-primary/40 relative mb-6">
         <img 
           src={project.image} 
           alt={project.title} 
-          className="w-full h-full object-cover object-center transform group-hover:scale-[1.02] transition-transform duration-500 select-none" 
+          decoding="async"
+          loading="lazy"
+          className={`w-full h-full object-cover transition-all duration-500 select-none ${project.imagePosition || 'object-center'}`} 
         />
       </div>
 

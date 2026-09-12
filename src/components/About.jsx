@@ -1,8 +1,7 @@
 import React from 'react';
 import {
-  Network, ShieldAlert, CheckCheck, Key, Cloud, Brain,
-  MessagesSquare, Workflow, Eye, Bot, Sparkles, Route,
-  Search, Shuffle, Server, LineChart
+  Network, ShieldAlert, MessagesSquare, Workflow,
+  Eye, Bot, Shuffle, Server
 } from 'lucide-react';
 import NeuralNet from './NeuralNet';
 import {
@@ -14,18 +13,10 @@ import {
 const iconMap = {
   'network': <Network size={13} className="text-cyan-400" />,
   'shield': <ShieldAlert size={13} className="text-amber-500" />,
-  'check': <CheckCheck size={13} className="text-purple-400" />,
-  'key': <Key size={13} className="text-indigo-400" />,
-  'cloud': <Cloud size={13} className="text-sky-400" />,
-  'brain': <Brain size={13} className="text-purple-400" />,
   'comments': <MessagesSquare size={13} className="text-emerald-400" />,
   'workflow': <Workflow size={13} className="text-cyan-400" />,
   'eye': <Eye size={13} className="text-teal-400" />,
   'robot': <Bot size={13} className="text-indigo-400" />,
-  'sparkles': <Sparkles size={13} className="text-blue-400" />,
-  'route': <Route size={13} className="text-rose-400" />,
-  'search': <Search size={13} className="text-amber-400" />,
-  'chart': <LineChart size={13} className="text-emerald-400" />,
   'shuffle': <Shuffle size={13} className="text-sky-400" />,
   'server': <Server size={13} className="text-indigo-400" />,
   'clerk': <ClerkIcon size={13} className="text-[#6C47FF]" />,
@@ -87,15 +78,15 @@ export default function About() {
             <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-border-primary">
               <div>
                 <p className="text-lg font-bold text-text-primary">Sukkur IBA</p>
-                <p className="text-[10px] text-text-faint uppercase tracking-[0.15em]">Education</p>
+                <p className="text-[10px] text-text-dim uppercase tracking-[0.15em]">Education</p>
               </div>
               <div>
                 <p className="text-lg font-bold text-text-primary">Full Stack-AI/ML</p>
-                <p className="text-[10px] text-text-faint uppercase tracking-[0.15em]">Expertise</p>
+                <p className="text-[10px] text-text-dim uppercase tracking-[0.15em]">Expertise</p>
               </div>
               <div>
-                <p className="text-lg font-bold text-text-primary">07+</p>
-                <p className="text-[10px] text-text-faint uppercase tracking-[0.15em]">Projects</p>
+                <p className="text-lg font-bold text-text-primary">08+</p>
+                <p className="text-[10px] text-text-dim uppercase tracking-[0.15em]">Projects</p>
               </div>
             </div>
           </div>
@@ -108,10 +99,10 @@ export default function About() {
             <div className="space-y-5">
               {/* Languages */}
               <div>
-                <h4 className="text-[10px] font-medium text-text-faint uppercase tracking-[0.15em] mb-2">Languages</h4>
+                <h4 className="text-[10px] font-medium text-text-dim uppercase tracking-[0.15em] mb-2">Languages</h4>
                 <div className="flex flex-wrap gap-1.5">
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" className="w-3.5 h-3.5" /> Python
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/icons/python/python-original.svg" alt="Python" className="w-3.5 h-3.5" /> Python
                   </span>
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
                     <i className="devicon-javascript-plain colored text-sm"></i> JavaScript
@@ -133,7 +124,7 @@ export default function About() {
 
               {/* Full Stack */}
               <div>
-                <h4 className="text-[10px] font-medium text-text-faint uppercase tracking-[0.15em] mb-2">Full Stack Development</h4>
+                <h4 className="text-[10px] font-medium text-text-dim uppercase tracking-[0.15em] mb-2">Full Stack Development</h4>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { name: 'React.js', icon: 'devicon-react-original colored' },
@@ -156,7 +147,7 @@ export default function About() {
 
               {/* Databases */}
               <div>
-                <h4 className="text-[10px] font-medium text-text-faint uppercase tracking-[0.15em] mb-2">Databases</h4>
+                <h4 className="text-[10px] font-medium text-text-dim uppercase tracking-[0.15em] mb-2">Databases</h4>
                 <div className="flex flex-wrap gap-1.5">
                   <span className="px-2.5 py-1 text-[11px] font-medium rounded-lg bg-bg-subtle text-text-dim border border-border-primary flex items-center gap-1.5">
                     <i className="devicon-mongodb-plain colored text-sm"></i> MongoDB Atlas (+ Vector Search)
@@ -180,7 +171,7 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Generative AI */}
               <div>
-                <h4 className="text-[10px] font-medium text-text-faint uppercase tracking-[0.15em] mb-2">Generative AI</h4>
+                <h4 className="text-[10px] font-medium text-text-dim uppercase tracking-[0.15em] mb-2">Generative AI</h4>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { name: 'Transformers', icon: 'huggingface' },
@@ -214,7 +205,7 @@ export default function About() {
 
               {/* ML & DL */}
               <div>
-                <h4 className="text-[10px] font-medium text-text-faint uppercase tracking-[0.15em] mb-2">Machine Learning & Deep Learning</h4>
+                <h4 className="text-[10px] font-medium text-text-dim uppercase tracking-[0.15em] mb-2">Machine Learning & Deep Learning</h4>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { name: 'TensorFlow', icon: 'devicon-tensorflow-line colored' },
@@ -264,7 +255,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-border-primary flex items-center justify-between text-[10px] text-text-faint font-mono uppercase tracking-[0.15em]">
+            <div className="mt-6 pt-4 border-t border-border-primary flex items-center justify-between text-[10px] text-text-dim font-mono uppercase tracking-[0.15em]">
               <span>Environment Setup</span>
               <span className="text-text-primary font-semibold">Active</span>
             </div>

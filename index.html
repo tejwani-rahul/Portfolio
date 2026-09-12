@@ -1,34 +1,54 @@
 <!doctype html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Rahul Tejwani — Portfolio</title>
-    <meta name="description" content="Portfolio of Rahul Tejwani, a Full Stack AI Developer and AI Engineer crafting smart, impactful software solutions.">
-    
 
-    <!-- Devicon -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    
-    <!-- Google Fonts: Inter for body, Space Grotesk for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-      (function() {
-        const theme = localStorage.getItem('portfolio-theme') || 'light';
-        if (theme === 'dark') {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      })();
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rahul Tejwani — Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Rahul Tejwani, a Full Stack AI Developer and AI Engineer crafting smart, impactful software solutions.">
+
+
+  <!-- Preconnect to CDNs to start TCP/TLS handshakes early -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- LCP image preload: browser discovers profile image before React runs -->
+  <link rel="preload" as="image" href="/assets/images/profile.webp" fetchpriority="high">
+
+  <!-- Devicon v2.17.0 (pinned) — async non-blocking. jsDelivr caches pinned versions for 1yr vs 7d for @latest -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@2.17.0/devicon.min.css">
+  </noscript>
+
+  <!-- Google Fonts: Inter + Space Grotesk — async (non-blocking, saves ~470ms FCP) -->
+  <link rel="preload"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap">
+  </noscript>
+  <script>
+    (function () {
+      const theme = localStorage.getItem('portfolio-theme') || 'light';
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    })();
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
 </html>

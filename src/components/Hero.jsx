@@ -67,8 +67,10 @@ export default function Hero() {
           <div className="relative w-full max-w-[340px] aspect-square lg:aspect-[4/5] rounded-[2rem] border border-border-primary/80 overflow-hidden bg-bg-pure group shadow-[0_0_50px_rgba(255,255,255,0.01)] hover:border-text-ghost/30 hover:shadow-[0_0_50px_rgba(255,255,255,0.03)] transition-all duration-700">
             {/* Portrait Image */}
             <img
-              src="assets/images/profile.jpg"
+              src="assets/images/profile.webp"
               alt="Rahul Raja"
+              decoding="async"
+              fetchPriority="high"
               className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700 select-none"
             />
             {/* Dark Premium Gradient Overlay */}

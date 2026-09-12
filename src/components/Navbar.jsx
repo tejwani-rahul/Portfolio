@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Menu, X, Home, User, FolderOpen, Mail } from 'lucide-react';
 
-export default function Navbar({ currentPath }) {
+export default function Navbar() {
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem('portfolio-theme') || 'light';
   });
@@ -28,14 +28,12 @@ export default function Navbar({ currentPath }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 40);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Scrollspy observer for active section links
   useEffect(() => {
-    if (currentPath !== '#/') return;
-
     const sections = ['home', 'about', 'projects', 'contact'];
 
     const observerCallback = (entries) => {
@@ -64,7 +62,7 @@ export default function Navbar({ currentPath }) {
     return () => {
       observer.disconnect();
     };
-  }, [currentPath]);
+  }, []);
 
   // Close mobile menu on scroll or click outside
   useEffect(() => {
@@ -81,7 +79,7 @@ export default function Navbar({ currentPath }) {
       }
     };
 
-    window.addEventListener('scroll', handleScrollClose);
+    window.addEventListener('scroll', handleScrollClose, { passive: true });
     document.addEventListener('click', handleOutsideClick);
 
     return () => {
@@ -91,25 +89,13 @@ export default function Navbar({ currentPath }) {
   }, [isMobileMenuOpen]);
 
   const handleNavLinkClick = (e, id) => {
-    if (currentPath !== '#/') {
-      window.location.hash = '#/';
-      setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      e.preventDefault();
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
     setIsMobileMenuOpen(false);
   };
-
-  const isArchivePage = currentPath === '#/archive';
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-40 px-4 md:px-8 transition-all duration-500 ${isScrolled ? 'py-3' : 'py-5'}`}>
@@ -120,10 +106,9 @@ export default function Navbar({ currentPath }) {
       }`}>
         {/* Brand Mark */}
         <a 
-          href="#/"
+          href="#home"
           onClick={(e) => {
             e.preventDefault();
-            window.location.hash = '#/';
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
           className="font-heading text-sm font-bold tracking-[0.2em] text-text-primary uppercase flex items-center gap-3 group"
@@ -151,7 +136,7 @@ export default function Navbar({ currentPath }) {
           <a 
             href="#projects" 
             onClick={(e) => handleNavLinkClick(e, 'projects')}
-            className={`nav-link ${activeSection === 'projects' || isArchivePage ? 'active' : ''}`}
+            className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
           >
             Work
           </a>
@@ -169,7 +154,7 @@ export default function Navbar({ currentPath }) {
           {/* Theme Switcher */}
           <button 
             onClick={toggleTheme}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-text-ghost hover:text-text-primary hover:bg-text-primary/5 transition-all border border-border-primary" 
+            className="w-9 h-9 rounded-full flex items-center justify-center text-text-ghost hover:text-text-primary hover:bg-text-primary/5 transition-all border border-border-primary cursor-pointer" 
             aria-label="Toggle Theme"
           >
             {theme === 'light' ? <Moon size={14} /> : <Sun size={14} />}
@@ -178,7 +163,7 @@ export default function Navbar({ currentPath }) {
           {/* Mobile Navigation Toggle */}
           <button 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden w-9 h-9 rounded-full flex items-center justify-center text-text-ghost hover:text-text-primary hover:bg-text-primary/5 transition-all border border-border-primary" 
+            className="md:hidden w-9 h-9 rounded-full flex items-center justify-center text-text-ghost hover:text-text-primary hover:bg-text-primary/5 transition-all border border-border-primary cursor-pointer" 
             aria-label="Toggle Menu"
           >
             {isMobileMenuOpen ? <X size={14} /> : <Menu size={14} />}

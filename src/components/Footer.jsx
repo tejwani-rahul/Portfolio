@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="relative z-10 py-12 border-t border-border-primary/40 px-4 md:px-8">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center">
         
-        <p className="text-[11px] text-text-faint font-light tracking-wide">
+        <p className="text-[11px] text-text-dim font-normal tracking-wide">
           &copy; 2026 Rahul Raja. All rights reserved.
         </p>
         
